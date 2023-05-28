@@ -354,13 +354,14 @@ nav {
     display: flex;
     gap: 3rem;
     padding-bottom: 4rem;
+    position: relative;
 }
 
 .price_card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 25%;
     background: linear-gradient(167.91deg, #FFD6C4 -1.62%, #FFFFFF 104.93%);
     padding: 2rem;
     line-height: 2rem;
@@ -401,6 +402,22 @@ nav {
     border-radius: 15px;
     box-shadow: inset -2px -2px 6px #FF7800;
     border: none;
+}
+
+.pricing-btn-left {
+    display: none;
+    position: absolute;
+    left: -.5rem;
+    top: 40%;
+    padding: .5rem;
+}
+
+.pricing-btn-right {
+    display: none;
+    position: absolute;
+    right: -.5rem;
+    top: 40%;
+    padding: .5rem;
 }
 
 footer {
@@ -632,7 +649,7 @@ form button {
         padding-bottom: .25rem;
     }
 
-    .features_grid {
+    .features_card {
         width: 25%;
     }
 
@@ -641,8 +658,8 @@ form button {
     }
 
     .types_card {
-        width: 15%;
-        margin-left: 1.5rem;
+        width: 100%;
+        padding: 1rem .25rem;
     }
 
     .title_pricing {
@@ -653,9 +670,12 @@ form button {
         padding: .75rem;
     }
 
+    
+
     .price_card {
         margin: .75rem .75rem 4rem 0rem;
         padding: 1rem;
+        
     }
 
     .price_card h5, .price_card p {
@@ -793,12 +813,25 @@ form button {
     }
 
     .types_card {
-        width: 70%;
+        width: 50%;
         margin: 1rem auto;
     }
 
     .pricing {
         padding: .5rem;
+    }
+
+    .pricing_cards{
+        justify-content: center;
+    }
+
+    .price_card {
+        display: none;
+        width: 60%;
+    }
+
+    .most_popular {
+        left: -1rem
     }
 
     .pricing_title {
@@ -811,6 +844,14 @@ form button {
 
     .pricing_title h2 {
         width: 60%;
+    }
+
+    .pricing-btn-left {
+        display: block;
+    }
+    
+    .pricing-btn-right {
+        display: block;
     }
 
     footer {
@@ -826,6 +867,11 @@ form button {
     .footer_right_side {
         width: 100%;
         padding-bottom: 2rem;
+    }
+
+    .footer_right_side div img {
+        margin: .25rem;
+        padding: .25rem;
     }
 
     .copyright {
