@@ -21,11 +21,32 @@
     --types-color: #2D2D2D;
     --pricing-color: #646464;
     --black-color: #FAFAFA;
-    --header-font-color:#2D2D2D;
-    --font-color: #666666;
+    --header-font-color:#FAFAFA;
+    --font-color: #FAFAFA;
     --title-color: #FF7800;
     --footer-top: #666666;
     --footer-bottom: #D7D7D7;
+    --dark-theme-img: invert(100%) sepia(100%) saturate(0%) hue-rotate(208deg) brightness(103%) contrast(101%);
+}
+
+body {
+    color: var(--font-color);
+}
+
+body h1, body h2, body h3, body h4 {
+    color: var(--header-font-color);
+}
+
+body h5 {
+    color:var(--title-color);
+}
+
+p {
+    color: var(--font-color);
+}
+
+button {
+    color: var(--black-color);
 }
 
 
@@ -54,8 +75,16 @@ h4 {
     font-size: 1.25rem;
 }
 
+h5 {
+    font-size: 1.25rem;
+}
+
 p {
     font-size: 1rem;
+}
+
+a {
+    color: var(--font-color);
 }
 
 .btn {
@@ -80,6 +109,7 @@ nav {
 .logo {
     padding: 3vh 3vw;
     text-align: left;
+    filter: var(--dark-theme-img)
 }
 
 
@@ -98,7 +128,7 @@ nav {
 }
 
 #login {
-    color: #FFA039;
+    color: var(--header-orange-color);
     text-decoration: underline;
 }
 
@@ -122,6 +152,11 @@ nav {
     display: flex;
     flex-direction: column;
     width: 30%;
+}
+
+
+.png {
+    filter: var(--dark-theme-img);
 }
 
 .call_to_action h1 {
@@ -254,13 +289,18 @@ nav {
     box-shadow: 0px 15px 20px -10px rgba(145,60,0,.45);
     margin-top: 1rem;
     border-radius: 15px;
+    background-color: #FFFFFF;
 }
 
 .types_card_title {
     display: flex;
-    color: var(--title-color);
     padding: 1.5rem 0;
     font-size: 1.5rem;
+
+}
+
+.types_card p {
+    color: #666666;
 }
 
 .title_card_img{
@@ -288,13 +328,16 @@ nav {
     padding-bottom: 4rem;
 }
 
-.monthly-btn {
+#monthly-btn {
     background-color: #FFA039;
+    color: #FFFFFF;
 }
 
 .price_plan button {
     margin: .75rem;
     border: 1px solid #FF7800;
+    color: var(--black-color);
+    background-color: var(--pricing-color);
 }
 
 .pricing_cards {
@@ -312,6 +355,10 @@ nav {
     padding: 2rem;
     line-height: 2rem;
     border-radius: 15px;
+}
+
+.price_card p {
+    color: #666666;
 }
 
 .price_card:nth-of-type(3) {
