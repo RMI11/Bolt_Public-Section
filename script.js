@@ -7,8 +7,16 @@ let pricing = document.querySelector('.pricing');
 let span = document.querySelector('span');
 let logo = document.querySelector('.logo');
 let pricePlanButtons = document.querySelectorAll('.price-plan-btn');
+let hamburger = document.querySelector('.hamburger');
+let nav = document.querySelector('.nav-links');
 
-console.log(pricePlanButtons)
+hamburger.addEventListener('click', () => {
+    if (nav.style.display == 'none') {
+        nav.style.display = 'flex'
+    } else {
+        nav.style.display = 'none'
+    }
+})
 
 themeButton.addEventListener("click", () => {
     if (header.getAttribute('data-theme')) {

@@ -11,6 +11,7 @@
     --header-font-color:#2D2D2D;
     --font-color: #666666;
     --title-color: #FF7800;
+    --z-index: -1;
 }
 
 [data-theme="dark"] {
@@ -27,11 +28,13 @@
     --footer-top: #666666;
     --footer-bottom: #D7D7D7;
     --dark-theme-img: invert(100%) sepia(100%) saturate(0%) hue-rotate(208deg) brightness(103%) contrast(101%);
+    --z-index: 0;
 }
 
 body {
     color: var(--font-color);
 }
+
 
 body h1, body h2, body h3, body h4 {
     color: var(--header-font-color);
@@ -132,7 +135,13 @@ nav {
     text-decoration: underline;
 }
 
-.signup {
+.signup-btn {
+    border: 2px solid #FF7800;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.signup-btn_nav {
     border: 2px solid #FF7800;
     border-radius: 15px;
     padding: 1rem;
@@ -140,6 +149,7 @@ nav {
 
 .hamburger {
     display: none;
+    filter: var(--dark-theme-img);
 }
 
 .header {
@@ -367,14 +377,15 @@ nav {
 }
 
 .most_popular {
+    position: relative;
     text-align: center;
-    position: absolute;
-    top: -2rem;
-    left: 0;
     background: linear-gradient(180deg, #FFB769 0%, #FFFFFF 100%);
-    width: 100%;
+    width: 110%;
     border-radius: 15px;
     padding: .5rem 0;
+    z-index: var(--z-index);
+    top: -4.5rem;
+    left: -.75rem;
 }
 
 .price_card:first-of-type > p:not(:nth-last-of-type(n+12)) {
@@ -532,6 +543,12 @@ form button {
     color: #FAFAFA;
 }
 
+@media only screen and (max-width: 1023px) {
+    .login_right_side {
+        display: none;
+    }
+}
+
 /* SIGN UP */
 
 .signup {
@@ -552,6 +569,12 @@ form button {
 
 .signup_left_side a {
     color: #FFA039;
+}
+
+@media only screen and (max-width: 1023px) {
+    .signup_right_side {
+        display: none;
+    }
 }
 
 
@@ -674,6 +697,24 @@ form button {
 
     .nav-links {
         display: none;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        flex-direction: column;
+        justify-content: start;
+        left: 0;
+        top: 4rem;
+        background-color: #666666;
+    }
+
+    .nav-links li a {
+        color: white;
+        line-height: 4rem;
+    }
+
+    .signup-btn_cta {
+        background-color: #666666;
+        display: block;
     }
 
     .hamburger {
@@ -748,11 +789,12 @@ form button {
     }
 
     .types_wrapper{
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .types_card {
         width: 70%;
+        margin: 1rem auto;
     }
 
     .pricing {
