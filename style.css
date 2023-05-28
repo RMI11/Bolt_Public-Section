@@ -592,6 +592,15 @@ form button {
     .signup_right_side {
         display: none;
     }
+
+    .signup {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .signup form button {
+        margin-top: 1rem;
+    }
 }
 
 
@@ -670,10 +679,12 @@ form button {
         padding: .75rem;
     }
 
-    
+    .pricing_cards{
+        width: 100%;
+    }
 
     .price_card {
-        margin: .75rem .75rem 4rem 0rem;
+        margin: .75rem 0rem 4rem 0rem;
         padding: 1rem;
         
     }
@@ -693,6 +704,19 @@ form button {
 
     .price_plan button {
         width: 180px;
+    }
+
+    .copyright p {
+        font-size: 0.75rem;
+    }
+
+    .right_side_bottom{
+        position: absolute;
+        left: 35%;
+    }
+
+    .right_side_bottom a {
+        font-size: .75rem;
     }
 } 
 
@@ -875,12 +899,15 @@ form button {
     }
 
     .copyright {
-        font-size: .5rem;
         bottom: 0;
         left: 0;
         width: 100%;
         text-align: center;
         }
+
+    .copyright p {
+        font-size: .75rem;
+    }
 
     .right_side_bottom {
         position: static;
